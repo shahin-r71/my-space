@@ -6,6 +6,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
+import { prisma } from "@/lib/prisma";
 interface Post {
   title: string
   slug: string
@@ -28,9 +29,7 @@ interface Props {
 
 export default async function BlogPost({ params }: Props) {
   const { slug } = await params;
-  const posts: Post[] = await fetch("http://localhost:3000/api/content").then(
-    (res) => res.json()
-  )
+  const posts: Post[] = await prisma.blog.findMany()
   const  post=posts.find((post)=>post.slug===slug);
 
   if(!post){

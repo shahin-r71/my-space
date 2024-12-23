@@ -45,7 +45,7 @@ export default function UserDashboard({UserInfo}:Props) {
     })
     // const data=await response.json()
     // console.log(response)
-
+    return response;
   }
 
   return (

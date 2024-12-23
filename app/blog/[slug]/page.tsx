@@ -18,16 +18,16 @@ interface Props {
   }
 }
 
-export async function generateStaticParams() {
-  const posts: Post[] = await fetch('http://localhost:3000/api/content').then((res) => res.json())
+// export async function generateStaticParams() {
+//   const posts: Post[] = await fetch('http://localhost:3000/api/content').then((res) => res.json())
  
-  return posts.map((post) => ({
-    slug: post.slug,
-  }))
-}
+//   return posts.map((post) => ({
+//     slug: post.slug,
+//   }))
+// }
 
 export default async function BlogPost({ params }: Props) {
-  const { slug } = params;
+  const { slug } = await params;
   const posts: Post[] = await fetch("http://localhost:3000/api/content").then(
     (res) => res.json()
   )

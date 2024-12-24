@@ -19,13 +19,6 @@ interface Props {
   }
 }
 
-// export async function generateStaticParams() {
-//   const posts: Post[] = await fetch('http://localhost:3000/api/content').then((res) => res.json())
- 
-//   return posts.map((post) => ({
-//     slug: post.slug,
-//   }))
-// }
 
 export default async function BlogPost({ params }: Props) {
   const { slug } = await params;
@@ -42,14 +35,10 @@ export default async function BlogPost({ params }: Props) {
       <Card key={post.slug} className='p-4'>
             <CardHeader>
               <CardTitle>{post.title}</CardTitle>
-              {/* <CardDescription></CardDescription> */}
             </CardHeader>
             <CardContent>
               <p>{post.content}</p>
             </CardContent>
-            {/* <CardFooter>
-              <p>Card Footer</p>
-            </CardFooter> */}
         </Card>
     </div>
   )

@@ -9,7 +9,6 @@ export default async function SignIn() {
 
   if(session) return (
     <Link href={"/api/auth/signout"}>Sign Out</Link>
-    // <SignOutBtn />
   )
   return null;
 } 

@@ -24,11 +24,9 @@ const Navbar = () => {
             <Link href={"/users"}>Users</Link>
           </li>
           <li>
-            {/* <Link href={"/api/auth/signin"}><SignIn /></Link> */}
             <SignIn/>
           </li>
           <li>
-            {/* <Link href={"/api/auth/signout"}><SignOut /></Link> */}
             <SignOut/>
           </li>
           

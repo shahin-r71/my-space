@@ -45,13 +45,11 @@ A minimalist social media application that allows users to create profiles, writ
 
      DATABASE_URL=<your-postgresql-database-url>
 
-     NEXTAUTH_SECRET=<your-nextauth-secret>
+     AUTH_SECRET=<your-nextauth-secret>
 
-     NEXTAUTH_URL=<your-app-url>
+     AUTH_GITHUB_ID=<your-github-client-id>
 
-     GITHUB_ID=<your-github-client-id>
-
-     GITHUB_SECRET=<your-github-client-secret>
+     AUTH_GITHUB_SECRET=<your-github-client-secret>
    ```
 4. Run database migrations:
 
@@ -65,4 +63,4 @@ A minimalist social media application that allows users to create profiles, writ
    npm run dev
 
    ```
-6. Open the app in your browser at <http://localhost:3000>.
+6. Open the app in your browser at [http://localhost:3000](http://localhost:3000).
